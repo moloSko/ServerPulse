@@ -1,0 +1,337 @@
+/* Основные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a; /* Темный фон */
+    color: #5370f1; /* Основной цвет текста */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333; /* Темный фон для шапки */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #5370f1; /* Основная линия */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #5370f1; /* Основной цвет текста */
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Навигационная панель */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    border-bottom: 2px solid #5370f1;
+}
+
+.navbar-left, .navbar-center, .navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-center {
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+}
+
+.navbar-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.navbar-center h1 {
+    color: #5370f1;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.nav-item {
+    color: #5370f1;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item i {
+    margin-right: 5px;
+}
+
+.nav-item:hover {
+    color: #3a4fbf;
+}
+
+/* Выпадающее меню */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #5370f1;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #444;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Основной контент */
+.content-wrapper {
+    display: flex;
+}
+
+.server-list {
+    flex: 1;
+    margin-right: 20px;
+}
+
+/* Форма добавления сервера */
+form.add-server-form {
+    background-color: #262626; /* Темный фон для формы */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(83, 112, 241, 0.1); /* Основная тень */
+}
+
+form.add-server-form label {
+    display: block;
+    margin-top: 10px;
+    color: #5370f1; /* Основной цвет текста */
+    text-align: left; /* Выравниваем текст метки по левому краю */
+}
+
+form.add-server-form input[type="text"],
+form.add-server-form input[type="number"],
+form.add-server-form input[type="password"] {
+    background-color: #1a1a1a; /* Темный фон */
+    border: 1px solid #5370f1; /* Основная рамка */
+    color: #5370f1; /* Основной цвет текста */
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Учитываем padding и border в ширине */
+}
+
+form.add-server-form input[type="number"]::-webkit-outer-spin-button,
+form.add-server-form input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none; /* Убираем стрелки в Chrome/Safari */
+    margin: 0;
+}
+
+form.add-server-form input[type="text"]:focus,
+form.add-server-form input[type="number"]:focus,
+form.add-server-form input[type="password"]:focus {
+    border-color: #3a4fbf; /* Темный оттенок при фокусе */
+    outline: none;
+    text-align: left;
+}
+
+form.add-server-form button {
+    padding: 10px 20px;
+    background-color: #5370f1; /* Основной цвет фона */
+    color: #1a1a1a; /* Темный текст */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form.add-server-form button:hover {
+    background-color: #3a4fbf; /* Темный оттенок при наведении */
+}
+
+/* Список серверов */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #262626; /* Темный фон для элементов списка */
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(83, 112, 241, 0.1); /* Основная тень */
+    transition: transform 0.3s ease;
+}
+
+ul li:hover {
+    transform: translateY(-5px); /* Эффект поднятия при наведении */
+}
+
+ul li a {
+    color: #61e529; /* Зеленый текст */
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для секции с приветствием */
+.welcome-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.welcome-image {
+    width: 300px; /* Ширина изображения */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    border-radius: 8px; /* Закругленные углы */
+    margin-right: 20px; /* Отступ справа */
+    box-shadow: 0 0 10px rgba(187, 134, 252, 0.2); /* Фиолетовая тень */
+}
+
+.welcome-text {
+    flex: 1; /* Текст занимает оставшееся пространство */
+}
+
+.welcome-text h2 {
+    color: #bb86fc; /* Фиолетовый заголовок */
+    margin-top: 0;
+}
+
+.welcome-text p {
+    color: #bb86fc; /* Фиолетовый текст */
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Стили для авторизации и регистрации */
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #1a1a1a;
+}
+
+#formContent {
+    background: #262626;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(83, 112, 241, 0.1);
+    text-align: center;
+}
+
+#formFooter {
+    background-color: #333;
+    border-top: 1px solid #5370f1;
+    padding: 25px;
+    border-radius: 0 0 10px 10px;
+}
+
+h2.active {
+    color: #5370f1;
+    border-bottom: 2px solid #5370f1;
+}
+
+h2.inactive {
+    color: #cccccc;
+}
+
+.underlineHover {
+    display: inline-block;
+    margin: 0 10px;
+    color: #cccccc;
+    text-decoration: none;
+}
+
+.underlineHover:hover {
+    color: #5370f1;
+}
+
+input[type=text], input[type=password] {
+    background-color: #1a1a1a;
+    border: none;
+    color: #5370f1;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    width: 85%;
+    border: 2px solid #5370f1;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #262626;
+    border-bottom: 2px solid #5370f1;
+}
+
+input[type=submit] {
+    background-color: #5370f1;
+    border: none;
+    color: #1a1a1a;
+    padding: 15px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    border-radius: 5px;
+    margin: 5px 20px 40px 20px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #3a4fbf;
+}
+
+#icon {
+    width: 60px;
+    margin-bottom: 20px;
+}
